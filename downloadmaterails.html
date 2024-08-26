@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+<body>
+
+
+    
+<h1>The a download attribute</h1>
+
+<p>Click on the download it:<p>
+<a href="M1-UNIT-1.pdf" download>
+  download
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button id="downloadPdfBtn">Download PDF</button>
+
+    <script>
+        document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+            // Path to your PDF file
+            const pdfUrl = 'C:/Users/PASUP/OneDrive/Desktop/suni/M1-UNIT-1.pdf';
+            
+            // Create an anchor element
+            const link = document.createElement('a');
+            
+            // Set the href to the PDF file's URL
+            link.href = pdfUrl;
+            
+            // Set the download attribute with the desired file name
+            link.download = 'M1-UNIT-1.pdf';
+            
+            // Append the link to the body (necessary for Firefox)
+            document.body.appendChild(link);
+            
+            // Programmatically click the link to trigger the download
+            link.click();
+            
+            // Remove the link from the document
+            document.body.removeChild(link);
+        });
+    </script>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
